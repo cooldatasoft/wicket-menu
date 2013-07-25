@@ -22,7 +22,7 @@ Any recommendation, bug report or wish is very welcome.
 
 For simplicity, i will keep the version number same as wicket framework itself from now on. It will be easier to find which version is compatible with which version of wicket
 
-{{{
+
 
 <dependency>
   <groupId>com.cooldatasoft</groupId>
@@ -46,4 +46,4 @@ Finally add below repository to your pom.xml
   </repository>
 </repositories>
 
-}}}
+
