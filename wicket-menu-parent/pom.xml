@@ -50,9 +50,9 @@
 
 
 	<scm>
-		<connection>scm:git:git@github.com:fmucar/wicket-menu.git</connection>
-		<developerConnection>scm:git:git@github.com:fmucar/wicket-menu.git</developerConnection>
-		<url>git@github.com:fmucar/wicket-menu.git</url>
+		<connection>scm:git:git@github.com/fmucar/wicket-menu.git</connection>
+		<developerConnection>scm:git:git@github.com/fmucar/wicket-menu.git</developerConnection>
+		<url>git@github.com/fmucar/wicket-menu.git</url>
 	</scm>
 
 
