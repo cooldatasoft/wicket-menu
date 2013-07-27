@@ -189,18 +189,8 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+					<pomFileName>wicket-menu-parent/pom.xml</pomFileName>
 				</configuration>
-				<executions>
-					<execution>
-						<id>default</id>
-						<goals>
-							<goal>perform</goal>
-						</goals>
-						<configuration>
-							<pomFileName>wicket-menu-parent/pom.xml</pomFileName>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
