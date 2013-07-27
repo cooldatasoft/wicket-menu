@@ -52,7 +52,7 @@
 	<scm>
 		<connection>scm:git:ssh://git@github.com/fmucar/wicket-menu.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/fmucar/wicket-menu.git</developerConnection>
-		<url>http://github.com/fmucar/wicket-menu</url>
+		<url>http://github.com/fmucar/wicket-menu/wicket-menu-parent</url>
 	</scm>
 
 
