@@ -3,7 +3,7 @@
 	<parent>
 		<artifactId>wicket-menu-parent</artifactId>
 		<groupId>com.cooldatasoft</groupId>
-		<version>0.9.17-SNAPSHOT</version>
+		<version>6.9.2-SNAPSHOT</version>
 	</parent>
 	
 	<modelVersion>4.0.0</modelVersion>
