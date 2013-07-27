@@ -1,17 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.cooldatasoft</groupId>
 	<artifactId>wicket-menu-parent</artifactId>
-	<packaging>pom</packaging>
 	<version>6.9.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>Wicket Menu</name>
 	<description>Wicket Menu</description>
 
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
 	<properties>
 		<wicket.version>6.9.0</wicket.version>
-		
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.6</java.version>
 		<slf4j.version>1.7.5</slf4j.version>
@@ -20,17 +27,10 @@
 		<lombok.version>0.12.0</lombok.version>
 	</properties>
 
-	<scm>
-		<url>https://wicket-menu.googlecode.com/svn/trunk</url>
-		<connection>scm:svn:https://wicket-menu.googlecode.com/svn/trunk</connection>
-		<developerConnection>scm:svn:https://wicket-menu.googlecode.com/svn/trunk</developerConnection>
-	</scm>
-
 	<issueManagement>
-		<system>Google Code</system>
-		<url>http://code.google.com/p/wicket-menu/issues</url>
+		<system>Github</system>
+		<url>https://github.com/fmucar/wicket-menu/issues</url>
 	</issueManagement>
-
 
 	<developers>
 		<developer>
@@ -49,66 +49,71 @@
 	</licenses>
 
 
+	<scm>
+		<connection>scm:git:git@github.com:fmucar/wicket-menu.git</connection>
+		<developerConnection>scm:git:git@github.com:fmucar/wicket-menu.git</developerConnection>
+		<url>git@github.com:fmucar/wicket-menu.git</url>
+	</scm>
+
+
 	<distributionManagement>
-		<repository>
-			<id>wicket-menu-release</id>
-			<name>Maven Repository for wicket-menu release</name>
-			<url>svn:https://wicket-menu.googlecode.com/svn/maven/repo/</url>
-		</repository>
 		<snapshotRepository>
-			<id>wicket-menu-snapshot</id>
-			<name>Maven Repository forwicket-menu (snapshot)</name>
-			<url>svn:https://wicket-menu.googlecode.com/svn/maven/snapshot-repo</url>
-			<uniqueVersion>false</uniqueVersion>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus snapshot repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
-	</distributionManagement>
-
-
-	<repositories>
 		<repository>
-			<id>maven2-repository.dev.java.net</id>
-			<name>Java.net Repository for Maven</name>
-			<url>http://download.java.net/maven/2/</url>
+			<id>sonatype-nexus-staging</id>
+			<name>Sonatype Nexus release repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
-	</repositories>
-
+	</distributionManagement>
 
 	<profiles>
 		<profile>
-			<id>dev</id>
+			<id>release-sign-artifacts</id>
 			<activation>
-				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
 			</activation>
-			<properties>
-				<env>dev</env>
-			</properties>
-		</profile>
-		<profile>
-			<id>test</id>
-			<properties>
-				<env>test</env>
-			</properties>
-		</profile>
-		<profile>
-			<id>prod</id>
-			<properties>
-				<env>prod</env>
-			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.4</version>
+						<configuration>
+							<passphrase>${gpg.passphrase}</passphrase>
+						</configuration>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
+
 
 	<build>
 		<extensions>
 			<extension>
-				<groupId>org.jvnet.wagon-svn</groupId>
-				<artifactId>wagon-svn</artifactId>
-				<version>1.9</version>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-scm</artifactId>
+				<version>2.4</version>
 			</extension>
+			<!-- <extension> <groupId>org.apache.maven.scm</groupId> <artifactId>maven-scm-manager-plexus</artifactId> <version>2.4</version> </extension> 
+				<extension> <groupId>org.apache.maven.scm</groupId> <artifactId>maven-scm-provider-gitexe</artifactId> <version>2.4</version> </extension> -->
 		</extensions>
 
-		<filters>
-			<filter>${basedir}/src/main/filters/filter-${env}.properties</filter>
-		</filters>
 		<resources>
 			<resource>
 				<directory>${basedir}/src/main/resources</directory>
@@ -119,14 +124,10 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-		
+
 		<!-- Include sources in the final package -->
-		<!--
-			<resources> <resource>
-			<directory>${basedir}/src/main/resources</directory> </resource>
-			<resource> <directory>${basedir}/src/main/java</directory>
-			</resource> </resources>
-		-->
+		<!-- <resources> <resource> <directory>${basedir}/src/main/resources</directory> </resource> <resource> <directory>${basedir}/src/main/java</directory> 
+			</resource> </resources> -->
 		<plugins>
 			<!-- Attach source for deployed artifacts -->
 			<plugin>
@@ -180,28 +181,19 @@
 					<downloadJavadocs>true</downloadJavadocs>
 				</configuration>
 			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
 
-	<dependencies>
-	</dependencies>
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changes-plugin</artifactId>
-				<version>2.7.1</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>changes-report</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-		</plugins>
-	</reporting>
 	<dependencyManagement>
 		<dependencies>
 
@@ -246,9 +238,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-
-
 
 	<modules>
 		<module>wicket-menu</module>
