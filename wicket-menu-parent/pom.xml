@@ -48,14 +48,12 @@
 		</license>
 	</licenses>
 
-
 	<scm>
-		<connection>scm:git:git@github.com/fmucar/wicket-menu.git</connection>
-		<developerConnection>scm:git:git@github.com/fmucar/wicket-menu.git</developerConnection>
-		<url>git@github.com/fmucar/wicket-menu.git</url>
+		<url>https://github.com/fmucar/wicket-menu</url>
+		<connection>scm:git:git://github.com/fmucar/wicket-menu.git</connection>
+		<developerConnection>scm:git:git@github.com:fmucar/wicket-menu.git</developerConnection>
 	</scm>
-
-
+	
 	<distributionManagement>
 		<snapshotRepository>
 			<id>sonatype-nexus-snapshots</id>
