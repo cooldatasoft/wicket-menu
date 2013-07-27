@@ -38,6 +38,7 @@
 			<id>fmucar</id>
 			<name>Fatih Mehmet UCAR</name>
 			<email>fmucar@cooldatasoft.com</email>
+			<timezone>0</timezone>
 		</developer>
 	</developers>
 
@@ -50,8 +51,8 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:https://github.com/fmucar/wicket-menu.git</connection>
-		<developerConnection>scm:git:https://github.com/fmucar/wicket-menu.git</developerConnection>
+		<connection>scm:git:ssh://github.com/fmucar/wicket-menu.git</connection>
+		<developerConnection>scm:git:ssh://github.com/fmucar/wicket-menu.git</developerConnection>
 		<url>https://github.com/fmucar/wicket-menu</url>
 	</scm>
 
