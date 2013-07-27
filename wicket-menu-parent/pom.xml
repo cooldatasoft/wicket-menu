@@ -52,7 +52,7 @@
 	<scm>
 		<connection>scm:git:ssh://git@github.com/fmucar/wicket-menu.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/fmucar/wicket-menu.git</developerConnection>
-		<url>http://github.com/fmucar/wicket-menu/wicket-menu-parent</url>
+		<url>http://github.com/fmucar/wicket-menu</url>
 	</scm>
 
 
@@ -189,7 +189,6 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
-					<pomFileName>wicket-menu-parent/pom.xml</pomFileName>
 				</configuration>
 			</plugin>
 		</plugins>
