@@ -16,7 +16,7 @@ Only dependency is wicket itself
 
 For an online demo go to;
 
-http://www.cooldatasoft.com/wicket-menu-demo-6.9.0/
+http://www.cooldatasoft.com/wicket-menu-demo/
 
 Any recommendation, bug report or wish is very welcome.
 
