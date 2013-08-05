@@ -1,13 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.cooldatasoft</groupId>
 	<artifactId>wicket-menu-parent</artifactId>
-	<version>6.9.2-SNAPSHOT</version>
+	<version>6.9.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Wicket Menu</name>
 	<description>Wicket Menu</description>
-
 
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -17,7 +17,6 @@
 
 	<properties>
 		<wicket.version>6.9.0</wicket.version>
-
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.6</java.version>
 		<slf4j.version>1.7.5</slf4j.version>
@@ -30,7 +29,6 @@
 		<system>Github Issues</system>
 		<url>https://github.com/fmucar/wicket-menu/issues</url>
 	</issueManagement>
-
 
 	<developers>
 		<developer>
@@ -54,8 +52,6 @@
 		<developerConnection>scm:git:ssh://git@github.com/fmucar/wicket-menu.git</developerConnection>
 		<url>http://github.com/fmucar/wicket-menu</url>
 	</scm>
-
-
 
 	<distributionManagement>
 		<snapshotRepository>
@@ -84,7 +80,6 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.4</version>
 						<configuration>
 							<passphrase>${gpg.passphrase}</passphrase>
 						</configuration>
@@ -103,7 +98,6 @@
 		</profile>
 	</profiles>
 
-
 	<build>
 		<extensions>
 			<extension>
@@ -111,8 +105,10 @@
 				<artifactId>wagon-scm</artifactId>
 				<version>2.4</version>
 			</extension>
-			<!-- <extension> <groupId>org.apache.maven.scm</groupId> <artifactId>maven-scm-manager-plexus</artifactId> <version>2.4</version> </extension> 
-				<extension> <groupId>org.apache.maven.scm</groupId> <artifactId>maven-scm-provider-gitexe</artifactId> <version>2.4</version> </extension> -->
+			<!-- <extension> <groupId>org.apache.maven.scm</groupId> <artifactId>maven-scm-manager-plexus</artifactId> 
+				<version>2.4</version> </extension> <extension> <groupId>org.apache.maven.scm</groupId> 
+				<artifactId>maven-scm-provider-gitexe</artifactId> <version>2.4</version> 
+				</extension> -->
 		</extensions>
 
 		<resources>
@@ -127,8 +123,9 @@
 		</resources>
 
 		<!-- Include sources in the final package -->
-		<!-- <resources> <resource> <directory>${basedir}/src/main/resources</directory> </resource> <resource> <directory>${basedir}/src/main/java</directory> 
-			</resource> </resources> -->
+		<!-- <resources> <resource> <directory>${basedir}/src/main/resources</directory> 
+			</resource> <resource> <directory>${basedir}/src/main/java</directory> </resource> 
+			</resources> -->
 		<plugins>
 			<!-- Attach source for deployed artifacts -->
 			<plugin>
