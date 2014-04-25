@@ -16,7 +16,9 @@ Only dependency is wicket itself
 
 For an online demo go to;
 
-http://www.cooldatasoft.com/wicket-menu-demo/
+mvn clean package
+
+and deploy the demo war file to an application server
 
 Any recommendation, bug report or wish is very welcome.
 
