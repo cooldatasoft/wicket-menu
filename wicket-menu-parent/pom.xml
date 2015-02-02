@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.cooldatasoft</groupId>
 	<artifactId>wicket-menu-parent</artifactId>
-	<version>6.12.0</version>
+	<version>1.5.12</version>
 	<packaging>pom</packaging>
 	<name>Wicket Menu</name>
 	<description>Wicket Menu</description>
@@ -15,18 +15,18 @@
 	</parent>
 
 	<properties>
-		<wicket.version>6.12.0</wicket.version>
+		<wicket.version>1.5.12</wicket.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.6</java.version>
-		<slf4j.version>1.7.5</slf4j.version>
-		<junit.version>4.11</junit.version>
+		<slf4j.version>1.7.10</slf4j.version>
+		<junit.version>4.12</junit.version>
 		<maven.jar.includes>**/*.*</maven.jar.includes>
-		<lombok.version>1.12.2</lombok.version>
+		<lombok.version>1.16.0</lombok.version>
 	</properties>
 
 	<issueManagement>
 		<system>Github Issues</system>
-		<url>https://github.com/fmucar/wicket-menu/issues</url>
+		<url>https://github.com/cooldatasoft/wicket-menu/issues</url>
 	</issueManagement>
 
 	<developers>
@@ -47,9 +47,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:ssh://git@github.com/fmucar/wicket-menu.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/fmucar/wicket-menu.git</developerConnection>
-		<url>http://github.com/fmucar/wicket-menu</url>
+		<connection>scm:git:ssh://git@github.com/cooldatasoft/wicket-menu.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/cooldatasoft/wicket-menu.git</developerConnection>
+		<url>http://github.com/cooldatasoft/wicket-menu</url>
 	</scm>
 
 	<distributionManagement>
