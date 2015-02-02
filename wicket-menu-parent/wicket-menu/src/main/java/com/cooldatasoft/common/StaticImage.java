@@ -6,7 +6,7 @@ import org.apache.wicket.model.IModel;
 
 /**
  * 
- * @author Fatih Mehmet UCAR - fmucar@gmail.com
+ * @author Fatih Mehmet UCAR - fmucar@cooldatasoft.com
  * 
  */
 public class StaticImage extends WebComponent {

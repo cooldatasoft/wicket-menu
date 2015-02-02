@@ -30,7 +30,7 @@ import com.cooldatasoft.common.StaticImage;
 /**
  * http://www.cssmenumaker.com/builder/menu_info.php?menu=003
  * 
- * @author Fatih Mehmet UCAR - fmucar@gmail.com
+ * @author Fatih Mehmet UCAR - fmucar@cooldatasoft.com
  * 
  */
 @Slf4j

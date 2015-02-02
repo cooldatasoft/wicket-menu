@@ -34,7 +34,7 @@ import com.cooldatasoft.common.MenuItem;
  * line determines the font of the menu (change 12px and Verdana as desired). The last line
  * deterines the spacing between each line of text in the menu.
  * 
- * @author Fatih Mehmet UCAR - fmucar@gmail.com
+ * @author Fatih Mehmet UCAR - fmucar@cooldatasoft.com
  * 
  */
 public class SlideInMenu extends Panel implements IHeaderContributor {

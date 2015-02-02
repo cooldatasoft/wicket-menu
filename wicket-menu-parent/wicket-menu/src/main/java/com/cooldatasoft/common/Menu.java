@@ -5,7 +5,7 @@ import org.apache.wicket.markup.html.panel.Panel;
 
 /**
  * 
- * @author Fatih Mehmet UCAR - fmucar@gmail.com
+ * @author Fatih Mehmet UCAR - fmucar@cooldatasoft.com
  * 
  */
 public abstract class Menu extends Panel implements IHeaderContributor {

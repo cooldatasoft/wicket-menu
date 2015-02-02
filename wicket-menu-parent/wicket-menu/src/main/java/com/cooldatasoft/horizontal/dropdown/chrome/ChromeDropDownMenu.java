@@ -25,7 +25,7 @@ import com.cooldatasoft.common.MenuItem;
 
 /**
  * 
- * @author Fatih Mehmet UCAR - fmucar@gmail.com
+ * @author Fatih Mehmet UCAR - fmucar@cooldatasoft.com
  * 
  */
 public class ChromeDropDownMenu extends Panel implements IHeaderContributor {

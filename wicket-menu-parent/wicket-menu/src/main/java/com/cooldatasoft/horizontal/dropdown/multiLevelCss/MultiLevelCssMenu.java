@@ -25,7 +25,7 @@ import com.cooldatasoft.common.MenuItem;
 /**
  * http://www.dynamicdrive.com/style/csslibrary/item/ jquery_multi_level_css_menu_2/
  * 
- * @author Fatih Mehmet UCAR - fmucar@gmail.com
+ * @author Fatih Mehmet UCAR - fmucar@cooldatasoft.com
  * 
  */
 public class MultiLevelCssMenu extends Panel implements IHeaderContributor {

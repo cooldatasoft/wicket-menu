@@ -2,7 +2,7 @@ package com.cooldatasoft.common;
 
 /**
  * 
- * @author Fatih Mehmet UCAR - fmucar@gmail.com
+ * @author Fatih Mehmet UCAR - fmucar@cooldatasoft.com
  * 
  */
 public enum DestinationType {
