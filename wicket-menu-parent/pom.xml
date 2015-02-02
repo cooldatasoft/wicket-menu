@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.cooldatasoft</groupId>
 	<artifactId>wicket-menu-parent</artifactId>
-	<version>6.12.0</version>
+	<version>7.0.0-M5</version>
 	<packaging>pom</packaging>
 	<name>Wicket Menu</name>
 	<description>Wicket Menu</description>
@@ -15,7 +15,7 @@
 	</parent>
 
 	<properties>
-		<wicket.version>6.12.0</wicket.version>
+		<wicket.version>7.0.0-M5</wicket.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.6</java.version>
 		<slf4j.version>1.7.10</slf4j.version>
