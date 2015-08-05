@@ -13,7 +13,8 @@ Only dependency is wicket itself
 Any recommendation, bug report or wish is very welcome.
 
 For simplicity, I will keep the version number same as wicket framework itself and add wicket-menu version at the very end.
-So if you are using wicket 7.0.0 then you should get wicket-menu version 7.0.0.x where x is the largest to get the latest.
+
+So if you are using **wicket 7.0.0** then you should get **wicket-menu 7.0.0.x** where x is the largest to get the latest.
 
 
 Current Release version for maven users:
