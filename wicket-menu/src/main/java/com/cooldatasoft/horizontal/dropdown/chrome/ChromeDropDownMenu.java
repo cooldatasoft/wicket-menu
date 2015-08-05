@@ -95,8 +95,9 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 	 * First element of each list is assumed to be the top menu Use ChromeMenu.CSS.THEME1-4 for
 	 * different css themes
 	 * 
-	 * @param id
-	 * @param menuListOfLinkList
+	 * @param id wicket id of field
+	 * @param menuItemList list of menu items
+	 * @param cssTheme css theme
 	 */
 
 	public ChromeDropDownMenu(String id, List<MenuItem> menuItemList, CSS cssTheme) {
