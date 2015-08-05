@@ -3,24 +3,24 @@ Project aims to contain several dynamic css and javascript menu types to be used
 
 List of available css/javascript Menu's
 
-SunriseGlossDropDownMenu
-
-ChromeDropDownMenu
-
-SlideInMenu
-
-MultiLevelCssMenu
+* SunriseGlossDropDownMenu
+* ChromeDropDownMenu
+* SlideInMenu
+* MultiLevelCssMenu
 
 
 Only dependency is wicket itself 
-
-For an online demo go to;
-
-mvn clean package
-
-and deploy the demo war file to an application server
-
 Any recommendation, bug report or wish is very welcome.
 
-For simplicity, i will keep the version number same as wicket framework itself from now on. It will be easier to find which version is compatible with which version of wicket
+For simplicity, I will keep the version number same as wicket framework itself and add wicket-menu version at the very end.
+So if you are using wicket 6.15.0 then you should get wicket-menu version 6.15.0.x where x is the largest to get the latest.
+
+
+Current Release version for maven users:
+
+<dependency>
+	<groupId>com.cooldatasoft</groupId>
+	<artifactId>wicket-menu</artifactId>
+	<version>7.0.0</version>
+</dependency>
 
