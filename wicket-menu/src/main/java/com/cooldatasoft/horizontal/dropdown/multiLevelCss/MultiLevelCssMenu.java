@@ -37,8 +37,6 @@ public class MultiLevelCssMenu extends Panel implements IHeaderContributor {
 
 	private final static ResourceReference MENU_CSS = new CssResourceReference(MultiLevelCssMenu.class,
 			"css/MultiLevelCssMenu.css");
-	private final static ResourceReference JQUERY_MIN_JAVASCRIPT = new JavaScriptResourceReference(MultiLevelCssMenu.class,
-			"js/jqueryMin.js");
 	private final static ResourceReference MENU_JAVASCRIPT = new JavaScriptResourceReference(MultiLevelCssMenu.class,
 			"js/MultiLevelCssMenu.js");
 
