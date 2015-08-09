@@ -18,20 +18,16 @@ do
    git pull
 
    eval "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION -DgenerateBackupPoms=false"
-#   git add .
+   git add .
 
-#   eval "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
-#   git push
+   eval "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
+   git push
 
-#   deploy to central repo
 #   mvn clean deploy
 
 
     echo Creating release on github...
     GITHUB_TOKEN=$(head -n 1 ~/.m2/github-token)
-
-    eval "echo #\"#"
-    eval "echo {\"tag_name\": \"$wicketVersion.$WICKET_MENU_VERSION\", \"target_commitish\": \"$wicketVersion\", \"name\": \"wicket-menu-$wicketVersion.$WICKET_MENU_VERSION\", \"body\": \"wicket-menu for using with wicket version $wicketVersion\",  \"draft\": true,  \"prerelease\": false}"
     eval "curl -# -XPOST -H 'Content-Type:application/json' -H 'Accept:application/json' -d  '{\"tag_name\": \"$wicketVersion.$WICKET_MENU_VERSION\", \"target_commitish\": \"$wicketVersion\", \"name\": \"wicket-menu-$wicketVersion.$WICKET_MENU_VERSION\", \"body\": \"wicket-menu for using with wicket version $wicketVersion\",  \"draft\": true,  \"prerelease\": false}'  https://api.github.com/repos/cooldatasoft/wicket-menu/releases?access_token=$GITHUB_TOKEN -o response.json"
 
 
