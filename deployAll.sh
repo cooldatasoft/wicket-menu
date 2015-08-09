@@ -18,6 +18,7 @@ do
    git pull
 #   update maven version number as the next release version
    eval "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION"
+   git add .
 #   commit change to repo
    eval "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
    git push
