@@ -32,7 +32,7 @@ do
 
     eval "echo #\"#"
     eval "echo {\"tag_name\": \"$wicketVersion.$WICKET_MENU_VERSION\", \"target_commitish\": \"$wicketVersion\", \"name\": \"wicket-menu-$wicketVersion.$WICKET_MENU_VERSION\", \"body\": \"wicket-menu for using with wicket version $wicketVersion\",  \"draft\": true,  \"prerelease\": false}"
-    eval "curl -# -XPOST -H 'Content-Type:application/json' -H 'Accept:application/json' --data  {\"tag_name\": \"$wicketVersion.$WICKET_MENU_VERSION\", \"target_commitish\": \"$wicketVersion\", \"name\": \"wicket-menu-$wicketVersion.$WICKET_MENU_VERSION\", \"body\": \"wicket-menu for using with wicket version $wicketVersion\",  \"draft\": true,  \"prerelease\": false}  https://api.github.com/repos/cooldatasoft/wicket-menu/releases?access_token=$GITHUB_TOKEN -o response.json"
+    eval "curl -# -XPOST -H 'Content-Type:application/json' -H 'Accept:application/json' -d  {\"tag_name\": \"$wicketVersion.$WICKET_MENU_VERSION\", \"target_commitish\": \"$wicketVersion\", \"name\": \"wicket-menu-$wicketVersion.$WICKET_MENU_VERSION\", \"body\": \"wicket-menu for using with wicket version $wicketVersion\",  \"draft\": true,  \"prerelease\": false}  https://api.github.com/repos/cooldatasoft/wicket-menu/releases?access_token=$GITHUB_TOKEN -o response.json"
 
 
 done
