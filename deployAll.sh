@@ -10,18 +10,18 @@ declare -a WICKET_VERSIONS=("6.9.0")
 for wicketVersion in "${WICKET_VERSIONS[@]}"
 do
    echo "$wicketVersion"
-#   checkout branch for the specific version of wicket
    eval "git checkout  $wicketVersion"
+
 #   cahce username/password for git
    git config credential.helper store
    git fetch origin
    git pull
-#   update maven version number as the next release version
+
    eval "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION -DgenerateBackupPoms=false"
-   git add .
-#   commit change to repo
-   eval "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
-   git push
+#   git add .
+
+#   eval "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
+#   git push
 
 #   deploy to central repo
 #   mvn clean deploy
