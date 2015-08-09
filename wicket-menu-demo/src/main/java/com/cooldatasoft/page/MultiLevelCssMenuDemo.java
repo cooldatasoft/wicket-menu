@@ -9,9 +9,12 @@ import com.cooldatasoft.horizontal.dropdown.multiLevelCss.MultiLevelCssMenu;
 
 /**
  * http://www.dynamicdrive.com/style/csslibrary/item/jquery_multi_level_css_menu_2/
- * 
- * @author fucar
- * 
+ *
+ * For this menu to work properly, you might need to set the wicket not to output wicket tags.
+ *
+ * eg. getMarkupSettings().setStripWicketTags(true);
+ * @author fmucar
+ *
  */
 public class MultiLevelCssMenuDemo extends BasePage {
 

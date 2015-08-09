@@ -7,5 +7,9 @@ package com.cooldatasoft.common;
  */
 public enum DestinationType {
 
-	WEB_PAGE_CLASS, WEB_PAGE_INSTANCE, EXTERNAL_LINK, AJAX_TARGET, NONE;
+	WEB_PAGE_CLASS,
+	WEB_PAGE_INSTANCE,
+	EXTERNAL_LINK,
+	AJAX_TARGET,
+	NONE;
 }
