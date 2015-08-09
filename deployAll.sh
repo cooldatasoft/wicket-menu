@@ -17,7 +17,7 @@ do
    git fetch origin
    git pull
 #   update maven version number as the next release version
-   eval "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION"
+   eval "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION -DgenerateBackupPoms=false"
    git add .
 #   commit change to repo
    eval "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
