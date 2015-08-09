@@ -28,13 +28,13 @@ do
 
     JSON='{"tag_name": "$wicketVersion.$WICKET_MENU_VERSION", "target_commitish": "$wicketVersion", "name": "wicket-menu-$wicketVersion.$WICKET_MENU_VERSION", "body": "wicket-menu for using with wicket version $wicketVersion",  "draft": true,  "prerelease": false}'
     JSON=$(echo JSON | sed -e "s/\$wicketVersion/$WICKET_MENU_VERSION/g")
-    echo $JSON
+    echo "$JSON"
 
     echo Creating release on github...
     GITHUB_TOKEN=$(head -n 1 ~/.m2/github-token)
-    curl -# -XPOST -H 'Content-Type:application/json' -H 'Accept:application/json' \
+    curl -# -v -XPOST -H 'Content-Type:application/json' -H 'Accept:application/json' \
     --data  $JSON\
-    "https://api.github.com/repos/cooldatasoft/wicket-menu/releases?access_token=$GITHUB_TOKEN"
+    https://api.github.com/repos/cooldatasoft/wicket-menu/releases?access_token=$GITHUB_TOKEN
 
 
 done
