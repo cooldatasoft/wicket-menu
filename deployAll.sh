@@ -26,7 +26,7 @@ do
 #   deploy to central repo
 #   mvn clean deploy
 
-    JSON='{"tag_name": "$wicketVersion.$WICKET_MENU_VERSION", "target_commitish": "$wicketVersion", "name": "wicket-menu-$wicketVersion.$WICKET_MENU_VERSION", "body": "wicket-menu for using with wicket version $wicketVersion",  "draft": false,  "prerelease": false}'
+    JSON='{"tag_name": "$wicketVersion.$WICKET_MENU_VERSION", "target_commitish": "$wicketVersion", "name": "wicket-menu-$wicketVersion.$WICKET_MENU_VERSION", "body": "wicket-menu for using with wicket version $wicketVersion",  "draft": true,  "prerelease": false}'
     JSON=$(echo JSON | sed -e "s/\$wicketVersion/$WICKET_MENU_VERSION/g")
     echo $JSON
 
