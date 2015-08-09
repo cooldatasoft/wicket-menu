@@ -17,6 +17,11 @@ For simplicity, I will keep the version number same as wicket framework itself a
 So if you are using **wicket 7.0.0** then you should get **wicket-menu 7.0.0.x** where x is the largest to get the latest.
 
 
+For MultiLevelCssMenu to work properly, you need to strip the wicket tags.
+
+eg. getMarkupSettings().setStripWicketTags(true);
+
+
 Current Release version for maven users:
 
 ```
