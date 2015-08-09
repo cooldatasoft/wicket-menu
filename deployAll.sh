@@ -23,7 +23,7 @@ do
    eval "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
    git push
 
-   mvn clean deploy
+#   mvn clean deploy
 
    echo Creating release on github...
    GITHUB_TOKEN=$(head -n 1 ~/.m2/github-token)
