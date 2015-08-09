@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WICKET_MENU_VERSION = "2"
+WICKET_MENU_VERSION="2"
 
 ## declare an array variable
 declare -a WICKET_VERSIONS=("6.9.0" "6.9.1" "6.10.0")
@@ -25,6 +25,7 @@ do
 
 done
 
+git checkout master
 
 
 # You can access them using echo "${arr[0]}", "${arr[1]}" also
