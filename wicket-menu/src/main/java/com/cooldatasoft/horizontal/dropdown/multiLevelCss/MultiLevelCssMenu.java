@@ -1,5 +1,6 @@
 package com.cooldatasoft.horizontal.dropdown.multiLevelCss;
 
+import java.security.InvalidParameterException;
 import java.util.List;
 
 import org.apache.wicket.core.util.string.JavaScriptUtils;
@@ -19,6 +20,8 @@ import org.apache.wicket.request.resource.JavaScriptResourceReference;
 import org.apache.wicket.request.resource.PackageResourceReference;
 import org.apache.wicket.request.resource.ResourceReference;
 import org.apache.wicket.resource.DynamicJQueryResourceReference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.cooldatasoft.common.MenuItem;
 
@@ -30,6 +33,8 @@ import com.cooldatasoft.common.MenuItem;
  */
 public class MultiLevelCssMenu extends Panel implements IHeaderContributor {
 
+	private final static Logger LOGGER = LoggerFactory.getLogger(MultiLevelCssMenu.class);
+
 	private static final long serialVersionUID = 1L;
 
 	private final static ResourceReference DOWN_GIF = new PackageResourceReference(MultiLevelCssMenu.class, "js/down.gif");
@@ -37,8 +42,6 @@ public class MultiLevelCssMenu extends Panel implements IHeaderContributor {
 
 	private final static ResourceReference MENU_CSS = new CssResourceReference(MultiLevelCssMenu.class,
 			"css/MultiLevelCssMenu.css");
-	private final static ResourceReference JQUERY_MIN_JAVASCRIPT = new JavaScriptResourceReference(MultiLevelCssMenu.class,
-			"js/jqueryMin.js");
 	private final static ResourceReference MENU_JAVASCRIPT = new JavaScriptResourceReference(MultiLevelCssMenu.class,
 			"js/MultiLevelCssMenu.js");
 
@@ -78,10 +81,10 @@ public class MultiLevelCssMenu extends Panel implements IHeaderContributor {
 			setResponsePage(menuItem.getResponsePage());
 			break;
 		case AJAX_TARGET:
-			// DO Nothing as ajax will execute
+			menuItem.getAjaxLink().onClick();
 			break;
 		case NONE:
-			// TODO throw exception
+			LOGGER.warn("MenuItem does not have a destination! ");
 			break;
 		}
 	}
