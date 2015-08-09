@@ -1,23 +1,18 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<parent>
 		<artifactId>wicket-menu-parent</artifactId>
 		<groupId>com.cooldatasoft</groupId>
-		<version>6.9.0.2</version>
+		<version>6.9.0.1</version>
 	</parent>
-
+	
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>wicket-menu-demo</artifactId>
-	<packaging>war</packaging>
-	<name>Wicket Menu Demo</name>
-	<description>Wicket Menu Demo</description>
+	<artifactId>wicket-menu</artifactId>
+	<packaging>jar</packaging>
+	<name>Wicket Menu</name>
+	<description>Wicket-Menu</description>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.cooldatasoft</groupId>
-			<artifactId>wicket-menu</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
 			<artifactId>wicket-core</artifactId>
@@ -25,14 +20,17 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -57,5 +55,4 @@
 			</resource>
 		</resources>
 	</build>
-
 </project>
