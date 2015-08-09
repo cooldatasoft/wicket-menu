@@ -48,7 +48,7 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 	};
 
 	private int numberOfMenu;
-	private ResourceReference menuCssResourceReference;
+	private final ResourceReference menuCssResourceReference;
 
 	@Override
 	public void renderHead(IHeaderResponse response) {
