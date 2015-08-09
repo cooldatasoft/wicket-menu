@@ -134,10 +134,7 @@ isContained:function(m, e){
 	var e=window.event || e
 	var c=e.relatedTarget || ((e.type=="mouseover")? e.fromElement : e.toElement)
 	while (c && c!=m)try {c=c.parentNode} catch(e){c=m}
-	if (c==m)
-		return true
-	else
-		return false
+	return c == m;
 },
 
 dynamichide:function(m, e){
