@@ -1,22 +1,25 @@
 #!/bin/bash
 
-WICKET_MENU_VERSION = 2
-
-WICKET_VERSIONS=(6.9.0 6.9.1 6.10.0)
-echo ${ARRAY[*]}
-
+WICKET_MENU_VERSION = "2"
 
 ## declare an array variable
-declare -a arr=("6.9.0" "6.9.1" "6.10.0")
+declare -a WICKET_VERSIONS=("6.9.0" "6.9.1" "6.10.0")
 
 ## now loop through the above array
-for i in "${arr[@]}"
+for wicketVersion in "${WICKET_VERSIONS[@]}"
 do
-   echo "$i"
-   eval "git checkout  $i"
-   eval "mvn versions:set -DnewVersion=$i.$WICKET_MENU_VERSION"
-   eval "git commit -m 'Release $i.$WICKET_MENU_VERSION'"
-   git push
+   echo "$wicketVersion"
+   eval "git checkout  $wicketVersion"
+   #cahce username/password for git
+   git config credential.helper store
+   git fetch origin
+   git pull
+   echo "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION"
+   echo "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
+#   git push
+
+
+
 #   mvn clean deploy
 #   create relase tag
 
