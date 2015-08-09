@@ -1,5 +1,19 @@
 #!/bin/bash
 
+git checkout  6.9.0
+mvn versions:set -DnewVersion=6.9.0.2
+mvn clean deploy
+
+
+git checkout  6.9.1
+mvn versions:set -DnewVersion=6.9.1.2
+mvn clean deploy
+
+
+git checkout  6.10.0
+mvn versions:set -DnewVersion=6.10.0.2
+mvn clean deploy
+
 git checkout  6.11.0
 mvn versions:set -DnewVersion=6.11.0.2
 mvn clean deploy
