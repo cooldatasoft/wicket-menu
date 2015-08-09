@@ -3,24 +3,26 @@
 WICKET_MENU_VERSION="2"
 
 ## declare an array variable
-declare -a WICKET_VERSIONS=("6.9.0" "6.9.1" "6.10.0")
+declare -a WICKET_VERSIONS=("6.9.0" "6.9.1" "6.10.0" "6.11.0" "6.12.0" "6.13.0" "6.14.0" "6.15.0" "6.16.0" "6.17.0" "6.18.0" "6.19.0" "6.20.0" "7.0.0")
 
 ## now loop through the above array
 for wicketVersion in "${WICKET_VERSIONS[@]}"
 do
    echo "$wicketVersion"
+   #checkout branch for the specific version of wicket
    eval "git checkout  $wicketVersion"
    #cahce username/password for git
    git config credential.helper store
    git fetch origin
    git pull
-   echo "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION"
-   echo "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
-#   git push
-
-
-
+   #update maven version number as the next release version
+   eval "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION"
+   #commit change to repo
+   eval "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
+   git push
+   #deploy to central repo
 #   mvn clean deploy
+   #create release on github
 #   create relase tag
 
 done
