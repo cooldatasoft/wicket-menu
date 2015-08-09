@@ -34,7 +34,7 @@ do
     GITHUB_TOKEN=$(head -n 1 ~/.m2/github-token)
     curl -# -v -XPOST -H 'Content-Type:application/json' -H 'Accept:application/json' \
     --data  $JSON\
-    https://api.github.com/repos/cooldatasoft/wicket-menu/releases?access_token=$GITHUB_TOKEN
+    https://api.github.com/repos/cooldatasoft/wicket-menu/releases?access_token=$GITHUB_TOKEN -o > response.json
 
 
 done
