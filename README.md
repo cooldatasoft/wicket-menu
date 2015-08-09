@@ -31,3 +31,8 @@ Current Release version for maven users:
 	<version>7.0.0.0</version>
 </dependency>
 ```
+
+
+
+To compile it from source:
+* You need to setup lombok framework for your IDE. https://projectlombok.org/download.html
