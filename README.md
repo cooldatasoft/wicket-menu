@@ -37,3 +37,4 @@ Current Release version for maven users:
 To compile it from source:
 
 * You need to setup lombok framework for your IDE. https://projectlombok.org/download.html
+* No specific change is required to build it with maven
