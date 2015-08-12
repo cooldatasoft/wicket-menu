@@ -8,7 +8,7 @@ padding: 25px;
 /*^'^ Navigation Structure ^'^*/
 .nav-container-outer{
 background: #990000;
-padding: 0px;
+padding: 0;
 height: 74px;
 background: url(../images/nav-bg.jpg);
 }
@@ -21,12 +21,12 @@ float: right;
 .nav-container .divider{
 display:block;
 font-size:1px;
-border-width:0px;
+border-width:0;
 border-style:solid;
 }
 .nav-container .divider-vert{
 float:left;
-width:0px;
+width:0;
 display: none;
 }
 .nav-container .item-secondary-title{
@@ -36,10 +36,10 @@ white-space:nowrap;
 }
 .clear{
 font-size:1px;
-height:0px;
-width:0px;
+height:0;
+width:0;
 clear:left;
-line-height:0px;
+line-height:0;
 display:block;
 float:none;
 }
@@ -62,8 +62,8 @@ position:absolute;
 }
 .nav-container, .nav-container ul{
 list-style:none;
-padding:0px;
-margin:0px;
+padding:0;
+margin:0;
 }
 .nav-container li a{
 float:none
@@ -93,14 +93,14 @@ left:auto;
 top:100%;
 }
 #nav-container ul li:hover>ul{
-top:0px;
+top:0;
 left:100%;
 }
 
 /*^'^ Primary Items ^'^*/	
 #nav-container a{	
 padding:7px 17px 7px 18px;
-margin: 10px 0px 0px 0px;
+margin: 10px 0 0 0;
 color: #FFFFFF;
 font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
 font-size:14px;
@@ -121,7 +121,7 @@ background-position: center;
 /*^'^ Secondary Items Container ^'^*/	
 #nav-container div, #nav-container ul{	
 padding:10px 4px 10px 4px;
-margin:0px 0px 0px 0px;
+margin:0 0 0 0;
 background: url(../images/item-secondary-container-bg.jpg);
 background-repeat: repeat-x;
 background-color: #FF9900;
@@ -134,11 +134,11 @@ padding:3px 10px 3px 6px;
 background-color: #FFFFFF;
 background: url(../images/item-secondary-bg.jpg);
 background-repeat: no-repeat;
-background-position: 0px 22px;
+background-position: 0 22px;
 font-size:11px;
-border-width:0px;
+border-width:0;
 border-style:none;
-margin: 0px 0px 0px 0px;
+margin: 0 0 0 0;
 width: 149px;
 }
 
@@ -153,7 +153,7 @@ color:#CC0000;
 /*^'^ Secondary Item Titles ^'^*/	
 #nav-container .item-secondary-title{	
 cursor:default;
-padding:4px 0px 3px 7px;
+padding:4px 0 3px 7px;
 color: #6C3600;
 font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
 font-size:11px;
@@ -173,6 +173,6 @@ border-color: #C16100;
 #nav-container .divider-vert{	
 border-left-width:1px;
 height:15px;
-margin:4px 2px 0px 2px;
+margin:4px 2px 0 2px;
 border-color:#AAAAAA;
 }
