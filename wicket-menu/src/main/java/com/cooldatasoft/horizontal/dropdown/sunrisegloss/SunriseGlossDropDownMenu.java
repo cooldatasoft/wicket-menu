@@ -98,7 +98,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 			protected void populateItem(ListItem<MenuItem> item) {
 				final MenuItem menuItem = (MenuItem) item.getModelObject();
 
-				Link<Void> link = null;
+				Link<Void> link;
 				log.info("Menu : {} , Type : {} ", menuItem.getMenuText(), menuItem.getDestinationType());
 				if (DestinationType.AJAX_TARGET == menuItem.getDestinationType()) {
 					if ("menuLink".equals(menuItem.getAjaxLink().getId())) {
@@ -147,7 +147,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 					protected void populateItem(ListItem<MenuItem> item) {
 						final MenuItem subMenuItem = (MenuItem) item.getModelObject();
 
-						Link<Void> subMenuLink = null;
+						Link<Void> subMenuLink;
 						log.info("Submenu : {} , Type : {} ", subMenuItem.getMenuText(), subMenuItem.getDestinationType());
 						if (DestinationType.AJAX_TARGET == subMenuItem.getDestinationType()) {
 							if (!"subMenuLink".equals(subMenuItem.getAjaxLink().getId())) {

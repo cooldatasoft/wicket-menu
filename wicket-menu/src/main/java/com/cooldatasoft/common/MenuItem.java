@@ -79,7 +79,7 @@ public class MenuItem implements Serializable {
 			throw new IllegalArgumentException("This constuctor is for menu seperators only!");
 		}
 		log.trace("Creating MenuItem with seperator = {} ", seperator);
-		setSeperator(true);
+		setSeperator(seperator);
 		setDestinationType(DestinationType.NONE);
 	}
 
