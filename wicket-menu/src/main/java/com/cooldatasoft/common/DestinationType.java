@@ -12,5 +12,5 @@ public enum DestinationType {
 	WEB_PAGE_INSTANCE,
 	EXTERNAL_LINK,
 	AJAX_TARGET,
-	NONE;
+	NONE
 }
