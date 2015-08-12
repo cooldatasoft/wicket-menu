@@ -96,7 +96,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 
 			@Override
 			protected void populateItem(ListItem<MenuItem> item) {
-				final MenuItem menuItem = (MenuItem) item.getModelObject();
+				final MenuItem menuItem = item.getModelObject();
 
 				Link<Void> link;
 				log.info("Menu : {} , Type : {} ", menuItem.getMenuText(), menuItem.getDestinationType());
@@ -143,7 +143,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 
 					@Override
 					protected void populateItem(ListItem<MenuItem> item) {
-						final MenuItem subMenuItem = (MenuItem) item.getModelObject();
+						final MenuItem subMenuItem = item.getModelObject();
 
 						Link<Void> subMenuLink;
 						log.info("Submenu : {} , Type : {} ", subMenuItem.getMenuText(), subMenuItem.getDestinationType());

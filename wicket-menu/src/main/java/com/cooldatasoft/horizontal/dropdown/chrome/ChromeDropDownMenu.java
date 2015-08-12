@@ -121,7 +121,7 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 
 			public void populateItem(final ListItem<MenuItem> item) {
 
-				final MenuItem menuItem = ((MenuItem) item.getModelObject());
+				final MenuItem menuItem = item.getModelObject();
 				Link<MenuItem> link = new Link<MenuItem>("menuLink") {
 					private static final long serialVersionUID = 1L;
 
@@ -152,7 +152,7 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 
 			@Override
 			public void populateItem(final ListItem<MenuItem> item) {
-				MenuItem menuItem = (MenuItem) item.getModelObject();
+				MenuItem menuItem = item.getModelObject();
 				List<MenuItem> subMenuList = menuItem.getSubMenuItemList();
 
 				WebMarkupContainer submenuDiv = new WebMarkupContainer("submenuDiv");
@@ -163,7 +163,7 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 
 					public void populateItem(final ListItem<MenuItem> item) {
 
-						final MenuItem subMenuItem = (MenuItem) item.getModelObject();
+						final MenuItem subMenuItem = item.getModelObject();
 
 						Link<MenuItem> link = new Link<MenuItem>("menuLink") {
 							private static final long serialVersionUID = 1L;
