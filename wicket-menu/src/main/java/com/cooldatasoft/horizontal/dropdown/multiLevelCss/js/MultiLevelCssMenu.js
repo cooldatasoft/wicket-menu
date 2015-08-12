@@ -24,7 +24,7 @@ buildmenu:function(menuid, arrowsvar){
 			var $curobj=$(this)
 			var $subul=$(this).find('ul:eq(0)')
 			this._dimensions={w:this.offsetWidth, h:this.offsetHeight, subulw:$subul.outerWidth(), subulh:$subul.outerHeight()}
-			this.istopheader=$curobj.parents("ul").length==1? true : false
+			this.istopheader=$curobj.parents("ul").length == 1
 			$subul.css({top:this.istopheader? this._dimensions.h+"px" : 0})
 			$curobj.children("a:eq(0)").css(this.istopheader? {paddingRight: arrowsvar.down[2]} : {}).append(
 				'<img src="'+ (this.istopheader? arrowsvar.down[1] : arrowsvar.right[1])
