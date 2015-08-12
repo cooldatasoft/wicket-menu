@@ -28,7 +28,7 @@ Current Release version for maven users:
 <dependency>
 	<groupId>com.cooldatasoft</groupId>
 	<artifactId>wicket-menu</artifactId>
-	<version>7.0.0.0</version>
+	<version>7.0.0.2</version>
 </dependency>
 ```
 
