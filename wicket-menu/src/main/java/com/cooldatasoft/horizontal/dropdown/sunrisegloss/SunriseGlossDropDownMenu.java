@@ -111,9 +111,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 
 						@Override
 						public void onClick() {
-							if (menuItem != null) {
-								processResponse(menuItem);
-							}
+							processResponse(menuItem);
 						}
 					};
 				}
@@ -124,7 +122,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 				Label linkText = new Label("linkText");
 				link.add(new AttributeModifier("class", new Model<>("item-primary")));
 
-				if (menuItem != null && menuItem.getMenuText() != null && !menuItem.isSeperator()) {
+				if (menuItem.getMenuText() != null && !menuItem.isSeperator()) {
 					linkText.setDefaultModel(new Model<>(menuItem.getMenuText()));
 					linkText.setRenderBodyOnly(true);
 				}
@@ -160,9 +158,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 
 								@Override
 								public void onClick() {
-									if (subMenuItem != null) {
-										processResponse(subMenuItem);
-									}
+									processResponse(subMenuItem);
 								}
 							};
 						}
@@ -179,7 +175,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 						}
 
 						Label subMenuLinkText = new Label("subMenuLinkText");
-						if (subMenuItem != null && subMenuItem.getMenuText() != null && !subMenuItem.isSeperator()) {
+						if (subMenuItem.getMenuText() != null && !subMenuItem.isSeperator()) {
 							subMenuLinkText.setDefaultModel(new Model<>(subMenuItem.getMenuText()));
 							subMenuLinkText.setRenderBodyOnly(true);
 						}
@@ -209,7 +205,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 					}
 				};
 				subMenuListContainer.add(subMenuListView);
-				if (menuItem != null && menuItem.getSubMenuItemList() != null && menuItem.getSubMenuItemList().size() == 0) {
+				if (menuItem.getSubMenuItemList() != null && menuItem.getSubMenuItemList().size() == 0) {
 					subMenuListContainer.setVisible(false);
 				}
 				item.add(link);
