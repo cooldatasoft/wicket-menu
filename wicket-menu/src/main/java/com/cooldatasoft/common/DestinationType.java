@@ -1,7 +1,8 @@
 package com.cooldatasoft.common;
 
 /**
- * 
+ * Defines the destination type of a menu.
+ *
  * @author Fatih Mehmet UCAR - fmucar@cooldatasoft.com
  * 
  */
