@@ -82,11 +82,11 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 		log.debug("bgLeftImg : {} ", bgLeftImgPath);
 		log.debug("bgRightImg : {} ", bgRightImgPath);
 
-		StaticImage bgLeftImage = new StaticImage("bgLeft", new Model<String>(bgLeftImgPath));
-		StaticImage bgRightImage = new StaticImage("bgRight", new Model<String>(bgRightImgPath));
+		StaticImage bgLeftImage = new StaticImage("bgLeft", new Model<>(bgLeftImgPath));
+		StaticImage bgRightImage = new StaticImage("bgRight", new Model<>(bgRightImgPath));
 
-		bgLeftImage.add(new AttributeModifier("class", new Model<String>("float-left")));
-		bgRightImage.add(new AttributeModifier("class", new Model<String>("float-right")));
+		bgLeftImage.add(new AttributeModifier("class", new Model<>("float-left")));
+		bgRightImage.add(new AttributeModifier("class", new Model<>("float-right")));
 
 		add(bgLeftImage);
 		add(bgRightImage);
@@ -119,13 +119,13 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 				}
 
 				Label seperator = new Label("menuSeperator");
-				seperator.add(new AttributeModifier("class", new Model<String>("divider divider-vert")));
+				seperator.add(new AttributeModifier("class", new Model<>("divider divider-vert")));
 
 				Label linkText = new Label("linkText");
-				link.add(new AttributeModifier("class", new Model<String>("item-primary")));
+				link.add(new AttributeModifier("class", new Model<>("item-primary")));
 
 				if (menuItem != null && menuItem.getMenuText() != null && !menuItem.isSeperator()) {
-					linkText.setDefaultModel(new Model<String>(menuItem.getMenuText()));
+					linkText.setDefaultModel(new Model<>(menuItem.getMenuText()));
 					linkText.setRenderBodyOnly(true);
 				}
 				link.add(linkText);
@@ -136,7 +136,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 				}
 
 				WebMarkupContainer subMenuListContainer = new WebMarkupContainer("subMenuListContainer");
-				List<MenuItem> subMenuList = new ArrayList<MenuItem>();
+				List<MenuItem> subMenuList = new ArrayList<>();
 				if (menuItem.getSubMenuItemList() != null) {
 					subMenuList = menuItem.getSubMenuItemList();
 				}
@@ -170,17 +170,17 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 						Label subMenuSeperatorOrSecondaryTitle = new Label("subMenuSeperatorOrSecondaryTitle");
 
 						if (subMenuItem.isSeperator()) {
-							subMenuSeperatorOrSecondaryTitle.add(new AttributeModifier("class", new Model<String>(
+							subMenuSeperatorOrSecondaryTitle.add(new AttributeModifier("class", new Model<>(
 									"divider divider-horiz")));
 						} else if (subMenuItem.isSubmenuTitle()) {
-							subMenuSeperatorOrSecondaryTitle.add(new AttributeModifier("class", new Model<String>(
+							subMenuSeperatorOrSecondaryTitle.add(new AttributeModifier("class", new Model<>(
 									"item-secondary-title")));
-							subMenuSeperatorOrSecondaryTitle.setDefaultModel(new Model<String>(subMenuItem.getMenuText()));
+							subMenuSeperatorOrSecondaryTitle.setDefaultModel(new Model<>(subMenuItem.getMenuText()));
 						}
 
 						Label subMenuLinkText = new Label("subMenuLinkText");
 						if (subMenuItem != null && subMenuItem.getMenuText() != null && !subMenuItem.isSeperator()) {
-							subMenuLinkText.setDefaultModel(new Model<String>(subMenuItem.getMenuText()));
+							subMenuLinkText.setDefaultModel(new Model<>(subMenuItem.getMenuText()));
 							subMenuLinkText.setRenderBodyOnly(true);
 						}
 

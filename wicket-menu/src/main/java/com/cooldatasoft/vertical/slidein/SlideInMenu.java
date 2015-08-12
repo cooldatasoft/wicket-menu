@@ -84,7 +84,7 @@ public class SlideInMenu extends Panel implements IHeaderContributor {
 
 	public void setMenuItemList(List<MenuItem> menuItemList) {
 		if (menuItemList == null) {
-			this.menuItemList = new ArrayList<MenuItem>();
+			this.menuItemList = new ArrayList<>();
 		} else {
 			this.menuItemList = menuItemList;
 		}

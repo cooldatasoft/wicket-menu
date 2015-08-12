@@ -58,7 +58,7 @@ public class MenuItem implements Serializable {
 	/**
 	 * Holds the submenu list of this menu item, if any/applies
 	 */
-	private List<MenuItem> subMenuItemList = new ArrayList<MenuItem>();
+	private List<MenuItem> subMenuItemList = new ArrayList<>();
 
 	/**
 	 * Marks this menu items as seperator if true.

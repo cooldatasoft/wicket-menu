@@ -134,7 +134,7 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 				};
 
 				// Adding submenu to menu item
-				link.add(new AttributeModifier("rel", new Model<String>("dropmenu" + itemCount)));
+				link.add(new AttributeModifier("rel", new Model<>("dropmenu" + itemCount)));
 				setNumberOfMenu(itemCount++);
 
 				Label linkText = new Label("linkText", menuItem.getMenuText());
@@ -156,7 +156,7 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 				List<MenuItem> subMenuList = menuItem.getSubMenuItemList();
 
 				WebMarkupContainer submenuDiv = new WebMarkupContainer("submenuDiv");
-				submenuDiv.add(new AttributeModifier("id", new Model<String>("dropmenu" + itemCount)));
+				submenuDiv.add(new AttributeModifier("id", new Model<>("dropmenu" + itemCount)));
 
 				ListView<MenuItem> submenuItem = new ListView<MenuItem>("submenuItem", subMenuList) {
 					private static final long serialVersionUID = 1L;
