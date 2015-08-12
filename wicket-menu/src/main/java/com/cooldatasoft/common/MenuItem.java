@@ -61,9 +61,9 @@ public class MenuItem implements Serializable {
 	private List<MenuItem> subMenuItemList = new ArrayList<>();
 
 	/**
-	 * Marks this menu items as seperator if true.
+	 * Marks this menu items as separator if true.
 	 */
-	private boolean seperator = false;
+	private boolean separator = false;
 
 	/**
 	 * Marks this menu item, if it is a submenu title
@@ -71,15 +71,15 @@ public class MenuItem implements Serializable {
 	private boolean submenuTitle = false;
 
 	/**
-	 * Used to create a seperator inside the menu
-	 * @param seperator true if this menu item is a separator.
+	 * Used to create a separator inside the menu
+	 * @param separator true if this menu item is a separator.
 	 */
-	public MenuItem(boolean seperator) {
-		if(!seperator){
-			throw new IllegalArgumentException("This constuctor is for menu seperators only!");
+	public MenuItem(boolean separator) {
+		if(!separator){
+			throw new IllegalArgumentException("This constuctor is for menu separators only!");
 		}
-		log.trace("Creating MenuItem with seperator = {} ", seperator);
-		setSeperator(seperator);
+		log.trace("Creating MenuItem with separator = {} ", separator);
+		setSeparator(separator);
 		setDestinationType(DestinationType.NONE);
 	}
 
@@ -185,10 +185,10 @@ public class MenuItem implements Serializable {
 	}
 
 	/**
-	 * Utility method that returns a menu seperator
-	 * @return seperator menu item
+	 * Utility method that returns a menu separator
+	 * @return separator menu item
 	 */
-	public static MenuItem getMenuSeperator() {
+	public static MenuItem getMenuSeparator() {
 		return new MenuItem(true);
 	}
 }

@@ -34,7 +34,7 @@ public class ChromeDropDownMenuDemo extends BasePage {
 		MenuItem subMenu3 = new MenuItem("SUBMENU 3", new Index());
 		MenuItem subMenu4 = new MenuItem("Submenu 4", new Index());
 		MenuItem subMenu5 = new MenuItem("SuBmEnU 5", new Index());
-		// Add submenus/submenu titles/seperators to the primary menu at your choice of order
+		// Add submenus/submenu titles/separators to the primary menu at your choice of order
 		primaryMenu1.getSubMenuItemList().add(subMenu1);
 		primaryMenu1.getSubMenuItemList().add(subMenu2);
 		primaryMenu1.getSubMenuItemList().add(subMenu3);

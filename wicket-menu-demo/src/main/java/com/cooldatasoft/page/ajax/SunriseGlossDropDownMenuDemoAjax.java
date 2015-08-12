@@ -95,12 +95,12 @@ public class SunriseGlossDropDownMenuDemoAjax extends BasePage {
 		// define submenu titles if you need one
 		MenuItem subMenuTitle1 = new MenuItem("Ajax links");
 		MenuItem subMenuTitle2 = new MenuItem("Main menu link");
-		// Add submenus/submenu titles/seperators to the primary menu at your choice of order
+		// Add submenus/submenu titles/separators to the primary menu at your choice of order
 
 		primaryMenu1.getSubMenuItemList().add(subMenuTitle1);
 		primaryMenu1.getSubMenuItemList().add(subMenu1);
 		primaryMenu1.getSubMenuItemList().add(subMenu2);
-		primaryMenu1.getSubMenuItemList().add(MenuItem.getMenuSeperator());
+		primaryMenu1.getSubMenuItemList().add(MenuItem.getMenuSeparator());
 
 		primaryMenu1.getSubMenuItemList().add(subMenuTitle2);
 		primaryMenu1.getSubMenuItemList().add(subMenu3);
