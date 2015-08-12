@@ -53,7 +53,7 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 	@Override
 	public void renderHead(IHeaderResponse response) {
 
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		buffer.append("var downGifRelativeLocation='<img src=\"");
 		buffer.append(RequestCycle.get().urlFor(DOWN_GIF, null));
 		buffer.append("\" border=\"0\" />'; ");
