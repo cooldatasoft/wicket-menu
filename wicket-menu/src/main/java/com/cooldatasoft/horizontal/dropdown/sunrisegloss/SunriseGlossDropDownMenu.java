@@ -22,6 +22,8 @@ import org.apache.wicket.request.cycle.RequestCycle;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.PackageResourceReference;
 import org.apache.wicket.request.resource.ResourceReference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.cooldatasoft.common.DestinationType;
 import com.cooldatasoft.common.MenuItem;
@@ -36,6 +38,7 @@ import com.cooldatasoft.common.StaticImage;
 @Slf4j
 public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributor {
 
+	private final static Logger LOGGER = LoggerFactory.getLogger(SunriseGlossDropDownMenu.class);
 	private static final long serialVersionUID = 1L;
 
 	private final static ResourceReference CSS_PATH = new CssResourceReference(SunriseGlossDropDownMenu.class,
@@ -66,9 +69,9 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 			// DO Nothing as ajax will execute
 			break;
 		case NONE:
+			LOGGER.warn("MenuItem does not have a destination! ");
 			break;
 		default:
-			// TODO Throw new exception
 			throw new RuntimeException("Destination type not valid!");
 		}
 	}
