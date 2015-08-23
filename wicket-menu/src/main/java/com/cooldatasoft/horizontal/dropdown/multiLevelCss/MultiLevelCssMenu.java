@@ -86,6 +86,8 @@ public class MultiLevelCssMenu extends Panel implements IHeaderContributor {
 		case NONE:
 			LOGGER.warn("MenuItem does not have a destination! ");
 			break;
+		default:
+			throw new RuntimeException("Destination type not valid!");
 		}
 	}
 
