@@ -20,6 +20,8 @@ import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.JavaScriptResourceReference;
 import org.apache.wicket.request.resource.PackageResourceReference;
 import org.apache.wicket.request.resource.ResourceReference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.cooldatasoft.common.MenuItem;
 
@@ -30,6 +32,7 @@ import com.cooldatasoft.common.MenuItem;
  */
 public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 
+	private final static Logger LOGGER = LoggerFactory.getLogger(ChromeDropDownMenu.class);
 	private static final long serialVersionUID = 1L;
 
 	private final static ResourceReference DOWN_GIF = new PackageResourceReference(ChromeDropDownMenu.class, "images/down.gif");
@@ -81,7 +84,10 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 			menuItem.getAjaxLink().onClick();
 			break;
 		case NONE:
+			LOGGER.warn("MenuItem does not have a destination! ");
 			break;
+		default:
+			throw new RuntimeException("Destination type not valid!");
 		}
 	}
 
