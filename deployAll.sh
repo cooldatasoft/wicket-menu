@@ -27,6 +27,7 @@ do
 #   git cherry-pick 3a59404392a982eef0e5b904cc348e1dd3d1f2e6
 #   git cherry-pick 3a296688361c3f13cdefe8a709ec6a527377360b
 #   git cherry-pick efa2ec2a918217abdf8a7e44fc844c829312b4d5
+
    git cherry-pick a3571e8845532cdfad98ee71ea0602383337b638
 
    eval "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION -DgenerateBackupPoms=false"
