@@ -18,9 +18,9 @@ do
    git pull
 
 
-------------------- UPDATE IF NECESSARY START -------------------
+#------------------- UPDATE IF NECESSARY START -------------------
    git cherry-pick e542428ab8eb9a7699f119ccfd061a321b299f05
-------------------- UPDATE IF NECESSARY END   -------------------
+#------------------- UPDATE IF NECESSARY END   -------------------
 
 
    eval "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION -DgenerateBackupPoms=false"
