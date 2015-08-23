@@ -78,7 +78,7 @@ public class ChromeDropDownMenu extends Panel implements IHeaderContributor {
 			setResponsePage(menuItem.getResponsePage());
 			break;
 		case AJAX_TARGET:
-			// DO Nothing as ajax will execute
+			menuItem.getAjaxLink().onClick();
 			break;
 		case NONE:
 			break;

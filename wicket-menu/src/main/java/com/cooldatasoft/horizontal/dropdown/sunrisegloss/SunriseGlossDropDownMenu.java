@@ -63,7 +63,7 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 			setResponsePage(menuItem.getResponsePage());
 			break;
 		case AJAX_TARGET:
-			// DO Nothing as ajax will execute
+			menuItem.getAjaxLink().onClick();
 			break;
 		case NONE:
 			break;
