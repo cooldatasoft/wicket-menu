@@ -1,7 +1,7 @@
 #!/bin/bash
+pwd
 
-WICKET_MENU_VERSION="2"
-
+WICKET_MENU_VERSION="3"
 ## declare versions of wicket that wicket-menu maintains
 declare -a WICKET_VERSIONS=("6.9.0" "6.9.1" "6.10.0" "6.11.0" "6.12.0" "6.13.0" "6.14.0" "6.15.0" "6.16.0" "6.17.0" "6.18.0" "6.19.0" "6.20.0" "7.0.0")
 #declare -a WICKET_VERSIONS=("6.9.0")
@@ -18,6 +18,11 @@ do
    git pull
 
    eval "mvn versions:set -DnewVersion=$wicketVersion.$WICKET_MENU_VERSION -DgenerateBackupPoms=false"
+
+   eval "rm wicket-menu-demo/src/main/java/com/cooldatasoft/app/WicketMenuDemoApplication.properties"
+
+   echo "wicketmenu.version = $wicketVersion.$WICKET_MENU_VERSION" >> wicket-menu-demo/src/main/java/com/cooldatasoft/app/WicketMenuDemoApplication.properties
+
    git add .
 
    eval "git commit -m 'Release $wicketVersion.$WICKET_MENU_VERSION'"
