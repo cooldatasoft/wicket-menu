@@ -1,10 +1,10 @@
 #!/bin/bash
 pwd
 
-WICKET_MENU_VERSION="3"
+WICKET_MENU_VERSION="4"
 ## declare versions of wicket that wicket-menu maintains
-#declare -a WICKET_VERSIONS=("6.9.0" "6.9.1" "6.10.0" "6.11.0" "6.12.0" "6.13.0" "6.14.0" "6.15.0" "6.16.0" "6.17.0" "6.18.0" "6.19.0" "6.20.0" "7.0.0")
-declare -a WICKET_VERSIONS=("6.9.1")
+declare -a WICKET_VERSIONS=("6.9.0" "6.9.1" "6.10.0" "6.11.0" "6.12.0" "6.13.0" "6.14.0" "6.15.0" "6.16.0" "6.17.0" "6.18.0" "6.19.0" "6.20.0" "7.0.0")
+#declare -a WICKET_VERSIONS=("6.9.1")
 
 ## now loop through the above array
 for wicketVersion in "${WICKET_VERSIONS[@]}"
