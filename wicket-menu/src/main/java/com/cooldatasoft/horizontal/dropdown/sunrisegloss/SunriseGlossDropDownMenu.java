@@ -119,22 +119,13 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 					};
 				}
 
-<<<<<<< HEAD
 				Label separator = new Label("menuSeparator");
 				separator.add(new AttributeModifier("class", new Model<>("divider divider-vert")));
-=======
-				Label seperator = new Label("menuSeperator");
-				seperator.add(new AttributeModifier("class", new Model<>("divider divider-vert")));
->>>>>>> f6c5b69... Removing explicit type param
 
 				Label linkText = new Label("linkText");
 				link.add(new AttributeModifier("class", new Model<>("item-primary")));
 
-<<<<<<< HEAD
 				if (menuItem.getMenuText() != null && !menuItem.isSeparator()) {
-=======
-				if (menuItem != null && menuItem.getMenuText() != null && !menuItem.isSeperator()) {
->>>>>>> f6c5b69... Removing explicit type param
 					linkText.setDefaultModel(new Model<>(menuItem.getMenuText()));
 					linkText.setRenderBodyOnly(true);
 				}
@@ -177,7 +168,6 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 
 						Label subMenuSeparatorOrSecondaryTitle = new Label("subMenuSeparatorOrSecondaryTitle");
 
-<<<<<<< HEAD
 						if (subMenuItem.isSeparator()) {
 							subMenuSeparatorOrSecondaryTitle.add(new AttributeModifier("class", new Model<>(
 									"divider divider-horiz")));
@@ -189,19 +179,6 @@ public class SunriseGlossDropDownMenu extends Panel implements IHeaderContributo
 
 						Label subMenuLinkText = new Label("subMenuLinkText");
 						if (subMenuItem.getMenuText() != null && !subMenuItem.isSeparator()) {
-=======
-						if (subMenuItem.isSeperator()) {
-							subMenuSeperatorOrSecondaryTitle.add(new AttributeModifier("class", new Model<>(
-									"divider divider-horiz")));
-						} else if (subMenuItem.isSubmenuTitle()) {
-							subMenuSeperatorOrSecondaryTitle.add(new AttributeModifier("class", new Model<>(
-									"item-secondary-title")));
-							subMenuSeperatorOrSecondaryTitle.setDefaultModel(new Model<>(subMenuItem.getMenuText()));
-						}
-
-						Label subMenuLinkText = new Label("subMenuLinkText");
-						if (subMenuItem != null && subMenuItem.getMenuText() != null && !subMenuItem.isSeperator()) {
->>>>>>> f6c5b69... Removing explicit type param
 							subMenuLinkText.setDefaultModel(new Model<>(subMenuItem.getMenuText()));
 							subMenuLinkText.setRenderBodyOnly(true);
 						}
